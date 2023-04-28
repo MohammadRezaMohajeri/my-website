@@ -1,10 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>My Website</title>
-</head>
-<body>
-	<h1>Welcome to my website!</h1>
-	<p>This is a paragraph of text.</p>
-</body>
-</html>
+// Get the elements with class="tabcontent" and hide them
+var tabcontent = document.getElementsByClassName("tabcontent");
+for (var i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}
+
+// Get the elements with class="tablinks" and add the onclick event listener
+var tablinks = document.getElementsByClassName("tablinks");
+for (var i = 0; i < tablinks.length; i++) {
+  tablinks[i].addEventListener("click", function() {
+    // Get the current clicked button's ID and show the corresponding tab content
+    var tabId = this.id.replace("tabBtn-", "");
+    openTab(event, tabId);
+  });
+}
+
+// Show the default tab content when the page loads
+document.getElementById("tab1").style.display = "block";
+
+// Function to open a tab
+function openTab(event, tabId) {
+  // Get all the elements with class="tabcontent" and hide them
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all the elements with class="tablinks" and remove the class "active"
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class
