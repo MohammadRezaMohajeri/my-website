@@ -1,7 +1,21 @@
+<style>
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.tab button.tablinks {
+  font-size: 20px;
+  padding: 16px 32px;
+}
+</style>
+
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'tab1')">Project overview</button>
-  <button class="tablinks" onclick="openTab(event, 'tab2')">Analysis steps</button>
-  <button class="tablinks" onclick="openTab(event, 'tab3')">DE results</button>
+  <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+  <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
+  <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
 </div>
 
 <div id="tab1" class="tabcontent">
