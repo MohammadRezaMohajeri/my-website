@@ -9,26 +9,32 @@
 .tab button.tablinks {
   font-size: 20px;
   padding: 16px 32px;
+  width: 33.33%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab button.tablinks.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  height: 100%;
+  text-align: center;
+}
+
+.tabcontent.active {
+  display: block;
 }
 </style>
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+  <button class="tablinks active" onclick="openTab(event, 'tab1')">Tab 1</button>
   <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
-  <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
-</div>
-
-<div id="tab1" class="tabcontent">
-  <h3>Tab 1 Content</h3>
-  <p>This is the content for tab 1.</p>
-</div>
-
-<div id="tab2" class="tabcontent">
-  <h3>Tab 2 Content</h3>
-  <p>This is the content for tab 2.</p>
-</div>
-
-<div id="tab3" class="tabcontent">
-  <h3>Tab 3 Content</h3>
-  <p>This is the content for tab 3.</p>
-</div>
+  <
