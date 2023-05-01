@@ -106,37 +106,38 @@
 	</style>
 </head>
 <body>
-	<div class="menu">
-		<ul>
-			<li><a href="#">Menu Item 1</a></li>
-			<li><a href="#">Menu Item 2</a></li>
-			<li><a href="#">Menu Item 3</a></li>
-			<li><a href="#">Menu Item 4</a></li>
-		</ul>
-	</div>
+	<div class="container">
+  <div class="menu">
+    <ul>
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+      <li><a href="#">Menu Item 4</a></li>
+    </ul>
+  </div>
+  <div class="tab-container">
+    <div class="tab">
+      <button class="tablinks active" onclick="openTab(event, 'overview')">Overview</button>
+      <button class="tablinks" onclick="openTab(event, 'analysis')">Analysis steps</button>
+      <button class="tablinks" onclick="openTab(event, 'results')">DE results</button>
+    </div>
+    <div class="content">
+      <div id="overview" class="tabcontent active">
+        <h2>Overview</h2>
+        <p> This is the content for the Overview tab. </p>
+      </div>
+      <div id="analysis" class="tabcontent">
+        <h2>Analysis Steps</h2>
+        <p>This is the content for the Analysis Steps tab.</p>
+      </div>
+      <div id="results" class="tabcontent">
+        <h2>DE Results</h2>
+        <p>This is the content for the DE Results tab.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-	<div class="tab">
-		<button class="tablinks active" onclick="openTab(event, 'overview')">Overview</button>
-		<button class="tablinks" onclick="openTab(event, 'analysis')">Analysis steps</button>
-		<button class="tablinks" onclick="openTab(event, 'results')">DE results</button>
-	</div>
-
-	<div class="content">
-		<div id="overview" class="tabcontent active">
-			<h2>Overview</h2>
-			<p> This is the content for the Overview tab. </p>
-		</div>
-
-		<div id="analysis" class="tabcontent">
-			<h2>Analysis Steps</h2>
-			<p>This is the content for the Analysis Steps tab.</p>
-		</div>
-
-		<div id="results" class="tabcontent">
-			<h2>DE Results</h2>
-			<p>This is the content for the DE Results tab.</p>
-		</div>
-	</div>
 	
 	<script>
 	  function openTab(evt, tabName) {
