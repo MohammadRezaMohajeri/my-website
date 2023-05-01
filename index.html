@@ -8,61 +8,66 @@
 			margin: 0;
 			padding: 0;
 		}
-		
+
 		body {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			min-height: 100vh;
-			align-items: center;
-			justify-content: center;
+			align-items: stretch;
 			background-image: url("https://github.com/MohammadRezaMohajeri/my-website/blob/main/Background-image-folder/Screenshot%202023-04-29%20131431.png?raw=true");
 			background-size: cover;
 		}
-		
+
 		.menu {
-			 display: flex;
-			 justify-content: flex-start;
-			 align-items: center;
-			 width: 100%;
-			 /* height: 250px;  */
-			 position: fixed;
-			 top: 0;
-			/* background-color: #333;  this will add a black box as a background of menu items */
-		
-			
+			display: flex;
+			flex-direction: column;
+			width: 20%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color: #ddd;
+			overflow-y: auto;
 		}
-		
-		 .menu ul {
-			 display: flex;
-			 flex-direction: column;
-			 list-style: none;
-			 margin: 0;
-			 padding: 0;
-       		}
-        
+
+		.menu ul {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
 		.menu li {
-		   	 margin: 0;
-		   	 padding: 0;
-		   	 width: 100%;
-		   	 text-align: center;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
 		}
-        
-       		 .menu li a {
-		         display: block;
-		         padding: 10px;
-		         background-color: #ddd;
-		         color: #333;
-		         font-size: 18px;
-		         text-decoration: none;
-		         border-top: 1px solid white;
-		         border-bottom: 1px solid white;
-		         transition: 0.3s;
+
+		.menu li a {
+			display: block;
+			padding: 10px;
+			color: #333;
+			font-size: 18px;
+			text-decoration: none;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			transition: 0.3s;
 		}
-        
-       		 .menu li a:hover {
-       		         background-color: #4CAF50;
-                         color: white;
-      	        }
+
+		.menu li a:hover {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		.tab-container {
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+			margin-left: 20%;
+			margin-top: 20px;
+		}
 
 		.tab {
 			display: flex;
@@ -106,16 +111,26 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-  <div class="menu">
-    <ul>
-      <li><a href="#">Menu Item 1</a></li>
-      <li><a href="#">Menu Item 2</a></li>
-      <li><a href="#">Menu Item 3</a></li>
-      <li><a href="#">Menu Item 4</a></li>
-    </ul>
+	<div class="menu">
+		<ul>
+			<li><a href="#">Menu Item 1</a></li>
+			<li><a href="#">Menu Item 2</a></li>
+			<li><a href="#">Menu Item 3</a></li>
+			<li><a href="#">Menu Item 4</a></li>
+		</ul>
+	</div>
+	<div class="tab-container">
+  <div class="menu-column">
+    <div class="menu">
+      <ul>
+        <li><a href="#">Menu Item 1</a></li>
+        <li><a href="#">Menu Item 2</a></li>
+        <li><a href="#">Menu Item 3</a></li>
+        <li><a href="#">Menu Item 4</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="tab-container">
+  <div class="tab-content-column">
     <div class="tab">
       <button class="tablinks active" onclick="openTab(event, 'overview')">Overview</button>
       <button class="tablinks" onclick="openTab(event, 'analysis')">Analysis steps</button>
@@ -138,8 +153,7 @@
   </div>
 </div>
 
-	
-	<script>
+<script>
 	  function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
 	    tabcontent = document.getElementsByClassName("tabcontent");
@@ -154,3 +168,5 @@
 	    evt.currentTarget.className += " active";
 	  }
 	</script>
+
+
